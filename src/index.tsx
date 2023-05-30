@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import { store } from "./logic/redux/store";
 import { InMemoryArticleRepo } from './logic/interfaces/ArticleRepository/InMemoryArticleRepo';
 import { NodeJsArticleRepo } from './logic/interfaces/ArticleRepository/NodeJsArticleRepo';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

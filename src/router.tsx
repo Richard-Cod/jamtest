@@ -8,6 +8,7 @@ import {
 import { ROUTES } from './constants';
 import AdminHomePage from "./pages/AdminHomePage"
 import AdminArticleDetailPage from './pages/AdminArticleDetailPage';
+import PaginatedArticles from './components/PaginatedArticles';
 
 function AppRouter() {
 
@@ -17,6 +18,9 @@ function AppRouter() {
         <Routes>
           <Route path={ROUTES.adminHomePage} element={<AdminHomePage />} />
           <Route path={ROUTES.articleDetails} element={<AdminArticleDetailPage />} />
+          <Route path={"paginated"} element={<PaginatedArticles />} />
+
+          
 
 
 

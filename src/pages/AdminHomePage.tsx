@@ -10,6 +10,7 @@ import { OUR_DATE_FORMAT, ROUTES } from '../constants';
 import ArticleForm from '../components/CreateArticleForm';
 import { addArticle, selectArticles, setArticles } from '../logic/redux/general';
 import { Navigate, useNavigate } from 'react-router-dom';
+import PaginatedArticles from '../components/PaginatedArticles';
 
 
 function AdminHomePage() {
@@ -25,7 +26,42 @@ function AdminHomePage() {
 
   
   return (
-    <div className="App">
+    <div className="App px-5 py-5">
+<h1>Liste des articles</h1>
+
+<PaginatedArticles />
+{/* <table className="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">content</th>
+      <th scope="col">image</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+
+    {articles?.map((article,i) => {
+
+return   <tr  key={i}>
+<th scope="row">1</th>
+<td>{article.title}</td>
+<td>{moment(article.date).format(OUR_DATE_FORMAT)} </td>
+<td> {article.image && <img src={article.image } />} </td>
+</tr>
+
+          // ee return <li onClick={() => {
+          //   navigate(ROUTES.toarticleDetails(article.title))
+         
+          // }} key={i}>   {article.title} - {moment(article.date).format(OUR_DATE_FORMAT)} </li>
+
+
+        })}
+
+  </tbody>
+</table> */}
+{/* 
       <ul>
         {articles?.map((article,i) => {
           return <li onClick={() => {
@@ -33,9 +69,9 @@ function AdminHomePage() {
          
           }} key={i}>   {article.title} - {moment(article.date).format(OUR_DATE_FORMAT)} </li>
         })}
-      </ul>
+      </ul> */}
+<h1>Créer un article</h1>
 
-      <hr></hr>
       <ArticleForm 
       initialValuesProp={null}
       onSubmitProp={async (values : any)=> {

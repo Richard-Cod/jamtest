@@ -37,25 +37,60 @@ const ArticleForm = ({onSubmitProp,initialValuesProp} : {onSubmitProp:any,initia
       onSubmit={handleSubmit}
     >
       <Form>
+
+      {/* <div className="mb-3">
+    <label htmlFor="exampleInputEmail1" className="form-label">
+      Email address
+    </label>
+    <input
+      type="email"
+      className="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+    />
+    <div id="emailHelp" className="form-text">
+      We'll never share your email with anyone else.
+    </div>
+  </div>
+  <div className="mb-3">
+    <label htmlFor="exampleInputPassword1" className="form-label">
+      Password
+    </label>
+    <input
+      type="password"
+      className="form-control"
+      id="exampleInputPassword1"
+    />
+  </div>
+  <div className="mb-3 form-check">
+    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+    <label className="form-check-label" htmlFor="exampleCheck1">
+      Check me out
+    </label>
+  </div> */}
+
+
+
+        
         <div>
-          <label htmlFor="title">Titre :</label>
-          <Field type="text" id="title" name="title" />
-          <ErrorMessage name="title" component="div" className="error" />
+          <label className="form-label" htmlFor="title">Titre :</label>
+          <Field  className="form-control" type="text" id="title" name="title" />
+          <ErrorMessage name="title" component="div" className="alert alert-danger" />
         </div>
 
         <div>
-          <label htmlFor="content">Contenu :</label>
-          <Field as="textarea" id="content" name="content" />
-          <ErrorMessage name="content" component="div" className="error" />
+          <label  className="form-label" htmlFor="content">Contenu :</label>
+          <Field className="form-control" as="textarea" id="content" name="content" />
+          <ErrorMessage name="content" component="div" className="alert alert-danger" />
         </div>
 
         <div>
-          <label htmlFor="image">Lien de l'image :</label>
-          <Field type="text" id="image" name="image" />
-          <ErrorMessage name="image" component="div" className="error" />
+          <label className="form-label" htmlFor="image">Lien de l'image :</label>
+          <Field className="form-control" type="text" id="image" name="image" />
+          <ErrorMessage name="image" component="div" className="alert alert-danger" />
         </div>
 
-        <button type="submit">Enregistrer</button>
+        <button className='btn btn-primary mt-4' type="submit">Enregistrer</button>
       </Form>
     </Formik>
   );
